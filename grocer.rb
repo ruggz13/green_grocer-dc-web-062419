@@ -56,8 +56,6 @@ def checkout(cart, coupons)
   final_cart.each do |name, properties|
     total += properties[:price] * properties[:count]
   end
-  if total > 100
-    total = total * 0.9
+  total = total * 0.9 if total > 100
   total
-end
 end
